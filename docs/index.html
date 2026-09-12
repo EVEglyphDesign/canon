@@ -42,16 +42,13 @@
   li { margin-bottom: 6px; }
   .files { display: grid; grid-template-columns: 1fr; gap: 14px; margin: 24px 0 8px; }
   .file {
-    display: block;
     padding: 22px 24px;
     background: var(--cream-2);
     border: 1px solid var(--line);
     border-radius: 4px;
-    text-decoration: none;
-    color: inherit;
-    transition: border-color 0.15s, background 0.15s;
+    transition: border-color 0.15s;
   }
-  .file:hover { border-color: var(--accent); background: var(--cream); }
+  .file:hover { border-color: var(--accent); }
   .file-name {
     font-family: 'Fraunces', serif;
     font-size: 24px;
@@ -61,8 +58,13 @@
     gap: 12px;
     margin-bottom: 6px;
   }
+  .file-name a { text-decoration: none; }
+  .file-name a:hover { color: var(--accent); }
   .file-tag { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--accent); border-radius: 2px; }
-  .file-desc { color: var(--mute); font-size: 15px; margin: 0; }
+  .file-desc { color: var(--mute); font-size: 15px; margin: 0 0 14px; }
+  .file-actions { margin: 12px 0 0; font-size: 14px; }
+  .download-btn { display: inline-block; padding: 8px 16px; background: var(--accent); color: var(--cream); text-decoration: none; border-radius: 3px; font-weight: 500; letter-spacing: 0.01em; }
+  .download-btn:hover { background: var(--ink); color: var(--cream); }
   .callout {
     background: var(--cream-2);
     border-left: 3px solid var(--accent);
@@ -117,14 +119,16 @@
 <section>
   <h2>The two files</h2>
   <div class="files">
-    <a class="file" href="https://github.com/EVEglyphDesign/canon/blob/main/CANON.md">
-      <div class="file-name">CANON.md <span class="file-tag">stays with account</span></div>
+    <div class="file">
+      <div class="file-name"><a href="https://github.com/EVEglyphDesign/canon/blob/main/CANON.md">CANON.md</a> <span class="file-tag">stays with account</span></div>
       <p class="file-desc">The single first read. Part I — Terms (bilateral agreement, 9 articles). Part II — Narrowing (boot contract, inherited compliance, blueprint, reference framework, project-specific rules and standing preferences).</p>
-    </a>
-    <a class="file" href="https://github.com/EVEglyphDesign/canon/blob/main/OBSERVATIONS.md">
-      <div class="file-name">OBSERVATIONS.md <span class="file-tag">shareable</span></div>
+      <p class="file-actions"><a href="https://raw.githubusercontent.com/EVEglyphDesign/canon/main/CANON.md">View raw</a></p>
+    </div>
+    <div class="file">
+      <div class="file-name"><a href="https://github.com/EVEglyphDesign/canon/blob/main/OBSERVATIONS.md">OBSERVATIONS.md</a> <span class="file-tag">shareable</span></div>
       <p class="file-desc">The register. Type-O rows record drift; Type-Δ rows record changes to the canon with prior text verbatim, new text verbatim, and reason. The evidence base and the change ledger in one register. This is the file that travels between contexts.</p>
-    </a>
+      <p class="file-actions"><a href="./OBSERVATIONS.md" download="OBSERVATIONS.md" class="download-btn">Download OBSERVATIONS.md</a> &nbsp; <a href="./OBSERVATIONS.md">View raw</a></p>
+    </div>
   </div>
 </section>
 
