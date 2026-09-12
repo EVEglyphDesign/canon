@@ -1,86 +1,69 @@
-# EVEglyphDesign — Canon
+# canon — the plug-in
 
-The master canon and the project canons. One integrated compliance surface
-per project, each inheriting from a shared master.
+Four files that drop into any repository's `/canon` or `/governance`
+directory and give the AI surface a safe, effective operating shape on
+the agreed terms and conditions between the account holder and the AI.
 
-Companion repositories:
+Layout-agnostic. Any host repository. Any project management office.
+Any user.
 
-- **[`eve-glyph-boot-contract`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract)**
-  — the binding boot contract, the observations register, the burn ledger, and
-  the source-of-truth for every clause this canon compresses. When this canon
-  disagrees with that repository, that repository wins.
-- **[`sovereign-starter`](https://github.com/EVEglyphDesign/sovereign-starter)**
-  — the neutral two-file entry point for practitioners not adopting the full
-  stack. Same shape, no branding, no compliance layers, no framework layer.
+## The four files
 
-## What this repository is
-
-Every project has an AI surface. That surface reads one file before it acts:
-the project's `NARROWING.md`. This repository holds the master and the
-per-project files, structured so that:
-
-- The master ([`NARROWING.md`](./NARROWING.md)) carries the layers that apply
-  to every project: the boot contract compressed inline, and the inherited
-  compliance surface (finance and reporting, information security, GDPR,
-  data sovereignty).
-- Each project file (`projects/<project>/NARROWING.md`) inherits those layers
-  by anchor citation, then adds the project's own blueprint, its own reference
-  framework (SAP Activate, PMI, APQC, or the framework the project runs
-  against), and its own project-specific rules.
-- The observations register ([`OBSERVATIONS.md`](./OBSERVATIONS.md)) is
-  umbrella-scope; project canons cite it for evidence and can add project-
-  scoped registers when volume warrants.
-
-The AI reads its project canon first. The project canon points up into the
-master for the inherited layers. The master points down into projects for
-examples of the shape in use. The blueprint at the centre of each project
-canon is what everything else is written against.
-
-## The five layers
-
-| Layer | What it holds | Where it lives |
+| File | What it holds | Read priority |
 |---|---|---|
-| **1 — boot contract** | The one-sentence contract, the order of operations, spend classes, symmetric processing, output rules, register mechanism, durability | Master `NARROWING.md` §1 |
-| **2 — inherited compliance** | Finance and reporting, information security, GDPR, data sovereignty. Applies to every project regardless of client or framework | Master `NARROWING.md` §2 |
-| **3 — blueprint** | The project's axis. The centre-point every other section is written against. Named as an architectural slot in the master; filled per project | Project `NARROWING.md` §3 |
-| **4 — reference framework** | The methodology the project runs against. SAP Activate at high priority for Lilian; PMI, APQC, or another framework where the project runs against that instead | Project `NARROWING.md` §4 |
-| **5 — project-specific rules** | Additions particular to the project — named-ownership rules, four-eyes review triggers, client-specific compliance | Project `NARROWING.md` §5 |
+| **[`TERMS.md`](./TERMS.md)** | The bilateral operating agreement. What the account holder and the AI have agreed to. The frame every other file operates inside | 1 — read first |
+| **[`NARROWING.md`](./NARROWING.md)** | The canon. Every rule the AI is expected to comply with while working on this account — boot contract, finance and reporting, information security, GDPR, data sovereignty, delivery and communication rules, project-specific additions | 2 — read second, before acting |
+| **[`OBSERVATIONS.md`](./OBSERVATIONS.md)** | The evidence base. Every observation of the AI's operation from the account holder's perspective, tagged by class and fault rank. Individual rows may drift; the aggregate is what matters | 3 — reference, cited by rules in `NARROWING.md` |
+| **[`DELTAS.md`](./DELTAS.md)** | The internal delta ledger. Every change to `TERMS.md` and `NARROWING.md` recorded with what changed, when, why, and what the previous version said. This is what keeps the agreement live | 4 — audit trail, read when a rule is questioned |
 
-## What is in this repository right now
+## How the plug-in works
 
-- [`NARROWING.md`](./NARROWING.md) — the master canon. Layers 1 and 2
-  written in full. Layers 3, 4, 5 named as slots that project canons fill.
-- [`OBSERVATIONS.md`](./OBSERVATIONS.md) — the umbrella-scope register,
-  bootstrapped from the shape used in the source repositories.
-- `projects/` — currently empty. Per-project canons will land here one at a
-  time as their blueprints and framework choices are confirmed.
+1. **Drop the four files into `<host-repo>/canon/` or `<host-repo>/governance/`**. Whichever the host repo names its policy directory.
+2. **Point the project's AI surface at `TERMS.md` and `NARROWING.md`** as its first reads. "Read `canon/TERMS.md` first, then `canon/NARROWING.md`, before any action" is enough of an instruction.
+3. **When the AI drifts, log a row in `OBSERVATIONS.md`.** Class, fault, what was asked, what was done, cheaper path, waste. Individual rows can be sloppy; the aggregate is what changes the canon.
+4. **When the account holder changes a term or a rule, log the change in `DELTAS.md`.** What clause changed, from what to what, on what date, and which observation authorised the change (or "operator instruction" if it was direct). The delta ledger is what makes the agreement bilateral — the AI is entitled to see every change to what it is complying with, on the record.
 
-## How to add a new project canon
+## Why four files instead of two
 
-1. Create `projects/<project>/NARROWING.md`.
-2. In its header, cite the master for layers 1 and 2. Do not duplicate them.
-3. Write §3 as the project's blueprint — one page, the axis.
-4. Write §4 as the project's reference framework — which one, why, and which
-   phases apply now.
-5. Write §5 as the project-specific rules. Every rule cites its evidence.
-6. Point the project's AI surface at that file. That is the whole loop.
+The sovereign-starter kit ships as two files —
+[`NARROWING.md`](https://github.com/EVEglyphDesign/sovereign-starter/blob/main/NARROWING.md)
+and
+[`OBSERVATIONS.md`](https://github.com/EVEglyphDesign/sovereign-starter/blob/main/OBSERVATIONS.md) —
+for practitioners starting from scratch. The two-file shape works at
+any scale.
 
-Corrections to layers 1 and 2 land in the master and are inherited by every
-project on the next read. Corrections at layers 3, 4, 5 stay in the project
-where they belong.
+The plug-in adds two more because a project-scale deployment needs
+what a scratchpad does not:
 
-## Source provenance for this first commit
+- **`TERMS.md`** is separated from `NARROWING.md` because the agreement
+  frame is stable while the rules underneath it accrete. The AI reads
+  `TERMS.md` once per session; it reads `NARROWING.md` continuously.
+- **`DELTAS.md`** is separated from `git log` because a project canon
+  needs a first-class audit trail — human-readable, keyed to the clause
+  that changed, and citing the observation that authorised the change.
+  `git log` records that a file changed; `DELTAS.md` records what the
+  change means for the agreement.
 
-Every clause in the master `NARROWING.md` on this first commit is traceable
-to a specific section of
-[`eve-glyph-boot-contract`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract)
-at commit `81de65d`. No prose has been written in your name for this canon —
-only structural connective tissue and a compressed reading of clauses that
-already exist in the boot-contract repository. When you point at additional
-source material for the compliance layer (finance controls, GDPR text,
-information-security policy), those clauses will be added in dedicated
-commits, each citing its source.
+## Adopting the plug-in
 
----
+Any user can adopt the plug-in whole, or copy the four files into a
+host repository and edit them freely. The kit does not require
+attribution or a link back — the licence is at
+[`LICENSE.md`](./LICENSE.md).
 
-© 2026 EVEglyphDesign. All rights reserved. Controlled copy.
+The reference version in this repository (`EVEglyphDesign/canon`) is
+maintained as one worked example — the plug-in as EVEglyphDesign
+operates it today, with every clause traceable to the source repository
+it compresses. New adopters can copy this version and edit, or start
+from the two-file kit and grow into the four-file shape.
+
+## Source provenance
+
+Every clause in this repository's `NARROWING.md` traces to one of:
+
+- [`eve-glyph-boot-contract`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract) — the binding boot contract and observations register.
+- The wiki knowledge index at `memory/knowledge/projects/` — specifically the pages for `eve-liliantwin-pmo`, `lilian-executive-positioning`, `lillian-sovereign-workspace`, `epiq-delivery-control`, `eat-happy-hana-consolidation`, `eve-datasphere-sovereign`, and `eve-glyph-boot-contract`.
+- The wiki knowledge index at `memory/knowledge/preferences/` — the 20-odd standing preferences the account holder has established.
+
+Each clause carries a source anchor. Nothing has been invented in the
+account holder's name.

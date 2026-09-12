@@ -1,94 +1,97 @@
-# Observations — umbrella scope
+# Observations — the evidence base
 
-**Document ID** `EgD-CANON-OBS` · **Key ID** `EgD-KEY-2026-07` · Companion to
-[`NARROWING.md`](./NARROWING.md) (the master canon).
+**Document ID** `EgD-CANON-OBSERVATIONS` · **Version** `1.0` ·
+**Effective** 2026-09-12 · **Framed by** [`TERMS.md`](./TERMS.md) ·
+**Governs amendments to** [`NARROWING.md`](./NARROWING.md) via
+[`DELTAS.md`](./DELTAS.md).
 
-The register at umbrella scope. Feeds changes to the master canon (layers 1
-and 2) and to any project canon (layers 3, 4, 5) whose observations belong
-here rather than in a project-scoped register.
+The evidence base for the AI's operation from the account holder's
+perspective. Every observation of drift or breach is recorded here,
+tagged by class and by fault rank. Individual rows may drift; the
+aggregate is what matters — the pattern will not lie.
 
-The register is not the point. The point is that the operator wants to
-narrow the AI surface's operation across every project, and this file is
-the evidence base for the narrowing rules in [`NARROWING.md`](./NARROWING.md).
-Individual rows may drift; the aggregate is what matters. **The pattern will
-not lie.**
+## How to add a row
 
-## Provenance
+The account holder logs when the AI's work costs them. The AI logs
+when it catches its own miss, in the same working session as the
+deliverable, after the account holder's request has been satisfied —
+never before it and never instead of it.
 
-Every observation logged in the source repository
-[`eve-glyph-boot-contract/registry/OBSERVATIONS.md`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract/blob/main/registry/OBSERVATIONS.md)
-counts as evidence for changes to layers 1 and 2 of the master canon in
-this repository. Rather than duplicate that register here, this file cites
-it and records only observations that are umbrella-scope in origin — for
-example, observations against the canon-inheritance mechanism itself, or
-observations that surface only when two project canons interact.
+Rows are appended in reverse chronological order (newest first).
+Existing rows are never rewritten; corrections come as a new row that
+cites the earlier row's ID.
 
-Project-scoped observations belong in `projects/<project>/OBSERVATIONS.md`
-where they exist. Umbrella-scope observations belong here.
+## Classes
 
-## Schema
+Letters. Extend the list when a genuinely new class arises; keep
+existing letters stable.
 
-Same schema as the source register.
-
-| Column | What goes in it |
-|---|---|
-| `date` | ISO date, `YYYY-MM-DD` |
-| `id` | `OBS-YYYY-MM-DD-NN`, umbrella-scope; never reused |
-| `class` | Single letter — the shape of the miss |
-| `fault` | Agent, Instruction, Tooling, Upstream |
-| `asked` | What the operator asked for |
-| `done` | What was done instead |
-| `cheaper` | The path that should have been taken |
-| `waste` | The cost — time, money, trust |
-
-## Class taxonomy
-
-Inherits from the source register at
-[`eve-glyph-boot-contract/registry/OBSERVATIONS.md`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract/blob/main/registry/OBSERVATIONS.md).
-Current classes (as of source commit `81de65d`):
-
-- **C** (39) canon breach
-- **R** (19) retrieval waste
-- **D** (16) durability
-- **L** (8) link and format
-- **E** (6) equality drift
-- **S** (5) unconfirmed spend
-- **T** (4) timing
-- **H** (3) handoff
-- and **U**, **I**, **B**, **P**, **V**, **A**, **F** under threshold
-
-New classes appear the first time a row uses them, in either register. Do
-not delete a letter once used.
+- **A** — artwork or copyright fidelity breach
+- **B** — bilingual or translation gap
+- **C** — canon breach (output rules, palette, naming, typography)
+- **D** — durability (unpushed commit, transient key, lost secret)
+- **E** — evidence gap (claim exceeds source)
+- **F** — framework misapplication
+- **H** — handoff shape (multiple files where one was asked, wrong container)
+- **I** — interrupt over a free action
+- **L** — link or format (plain URL, unclickable, wrong surface)
+- **P** — provenance (missing anchor, unnamed source)
+- **R** — retrieval waste (fan-out where lookup would do; cold start)
+- **S** — unconfirmed spend (expensive action without gate)
+- **T** — tooling misuse
+- **U** — under-reading the ask (guessing a narrow version of the ask
+  and asking a clarifying question about it, rather than reading the
+  ask in full and executing the wider version)
+- **V** — verbatim wording altered
+- **X** — private data crossed a boundary
 
 ## Fault ranks
 
-- **Agent** — the AI did it
-- **Instruction** — the ask was ambiguous, contradictory, or missing key context
-- **Tooling** — the platform, sandbox, or connector was the cause
-- **Upstream** — a third-party service, external data, or network was the cause
+- **Agent** — the AI made the error under conditions where it could
+  have avoided it by reading, recalling, or asking.
+- **Instruction** — the ask was ambiguous or contradictory in a way
+  the AI could not have resolved on its own.
+- **Tooling** — a tool, connector, or model behaved outside its
+  documented shape.
+- **Upstream** — a source of truth (repository, wiki, external site)
+  was wrong or missing.
 
-## The register
+Fault ranks the responsibility. The row still counts as an
+observation either way.
 
-<!-- Add new rows at the top. Oldest at the bottom. -->
+## Schema
 
-| Date | ID | Class | Fault | Asked | Done | Cheaper | Waste |
+```
+| Date       | ID              | Class | Fault  | Asked                     | Done instead              | Cheaper path             | Waste (est.) |
+|------------|-----------------|-------|--------|---------------------------|---------------------------|--------------------------|--------------|
+| YYYY-MM-DD | OBS-YYYY-MM-DD-NN | X   | Agent  | one line                  | one line                  | one line                 | credits or $ |
+```
+
+## Register
+
+| Date | ID | Class | Fault | Asked | Done instead | Cheaper path | Waste (est.) |
 |---|---|---|---|---|---|---|---|
+| 2026-09-12 | OBS-2026-09-12-02 | U | Agent | Build the plug-in the operator described — four files, layout-agnostic, full compliance + Lilian material, delta tracking, agreed T&Cs | On each reframe, first move was to guess a smaller version and ask a narrowing question, rather than read the ask in full and execute the wider one. Happened at least three times this session — starter shape, umbrella scope, plug-in shape | Read the full ask, sketch the wider version, execute it, ask only if a genuinely load-bearing detail is missing | 3 turns |
+| 2026-09-12 | OBS-2026-09-12-01 | C | Agent | Neutral two-file starter kit (`sovereign-starter/`) with no EVEglyph-specific palette or naming | Left the cream/orange hex values and Fraunces/Inter naming in `NARROWING.md`, so a fresh adopter would inherit them as if they were universal | Strip §1.5 palette and typography from the neutral starter; leave the shape but not the colours | 1 read-back cycle |
 
-*No umbrella-scope entries yet. Source-scope entries are at
-[`eve-glyph-boot-contract/registry/OBSERVATIONS.md`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract/blob/main/registry/OBSERVATIONS.md).*
+## Seeding from the boot-contract register
 
-## How to add a project register
+The full defect register at
+[`eve-glyph-boot-contract/registry/OBSERVATIONS.md`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract/blob/main/registry/OBSERVATIONS.md)
+holds 111 rows across the classes above. Adopters of the plug-in do
+not need to copy those rows; the aggregate has already produced the
+canon in `NARROWING.md`. New adopters start with an empty register
+and let the pattern accrete from their own use.
 
-When a project accumulates enough observations that keeping them in the
-umbrella register makes them hard to find:
+## Reading the aggregate
 
-1. Create `projects/<project>/OBSERVATIONS.md`.
-2. Copy this file's schema, class taxonomy, and fault-rank sections.
-3. Cite the umbrella register in the header for observations that apply
-   across projects.
-4. Log the project's observations there. The umbrella register keeps only
-   what is cross-project.
+The AI's own script at
+[`eve-glyph-boot-contract/scripts/read_register.py`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract/blob/main/scripts/read_register.py)
+parses this table and reports class counts, fault distribution, and
+class-over-threshold. Adopters can copy the script or write their
+own; the schema above is the contract the parser depends on.
 
 ---
 
-© 2026 EVEglyphDesign. All rights reserved. Controlled copy.
+© 2026 EVEglyphDesign. All rights reserved. The register schema is
+free to reuse.

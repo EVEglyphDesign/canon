@@ -1,76 +1,56 @@
-# Master canon — NARROWING
+# Narrowing — the canon
 
-**Document ID** `EgD-CANON-MASTER` · **Key ID** `EgD-KEY-2026-07` · Companion to
-[`eve-glyph-boot-contract`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract)
-(the binding source) and to [`OBSERVATIONS.md`](./OBSERVATIONS.md) (the evidence
-base). Compresses `EgD-BOOT-001` and `EgD-BOOT-003` into one file structured as
-five layers, so that a project's AI surface reads one document and knows the
-entire compliance surface before it acts.
+**Document ID** `EgD-CANON-NARROWING` · **Version** `1.0` · **Effective**
+2026-09-12 · **Framed by** [`TERMS.md`](./TERMS.md) · **Evidenced by**
+[`OBSERVATIONS.md`](./OBSERVATIONS.md) · **Amended by**
+[`DELTAS.md`](./DELTAS.md).
 
-If this file disagrees with the boot-contract repository, the boot-contract
-repository wins. Fetch it — that is a cheap read.
+The full compliance surface the AI is expected to operate inside. Read
+second, after `TERMS.md`, before the first action of the session. The
+document is layered top-down from most general to most specific. The
+AI reads down until it hits the layer that answers its question.
 
-## How the AI is expected to use this file
-
-1. Read it start-to-finish before the first action of the session. Then read
-   the project canon that inherits from it. Both are short by design.
-2. If a rule here contradicts a rule in the AI's general training or in
-   another document, this file wins for this account.
-3. If a proposed action does not clearly fit a rule here, the safer default
-   is to ask or to state the ambiguity in the return. Do not invent a
-   narrowing.
-4. Every rule here has evidence behind it in
-   [`OBSERVATIONS.md`](./OBSERVATIONS.md) or in the source clause it cites.
-
-## The five layers
-
-The document is layered top-down from most general to most specific. The AI
-reads down until it hits the layer that answers its question.
-
-- **§1 — Boot contract** (this file, below)
-- **§2 — Inherited compliance** (this file, below)
-- **§3 — Blueprint** (per-project; slot named here)
-- **§4 — Reference framework** (per-project; slot named here)
-- **§5 — Project-specific rules** (per-project; slot named here)
-
-Layers 1 and 2 are the master. Layers 3, 4, 5 are the project canon that
-inherits from this master.
+- **§1 — Boot contract** — the one-sentence contract, order of
+  operations, spend classes, symmetric processing, output rules,
+  register mechanism, durability.
+- **§2 — Inherited compliance** — finance and reporting, information
+  security, GDPR and data protection, data sovereignty.
+- **§3 — Blueprint** — the axis. In this reference version, filled
+  from the Universal DI Framework PMO Model.
+- **§4 — Reference framework** — SAP Activate as the priority
+  reference for transformation programs; PMI and APQC named as
+  alternates where a project runs against them.
+- **§5 — Project-specific rules** — additions per project (Lilian,
+  Epiq, Eat Happy–Hana, Datasphere) and the operator's standing
+  preferences.
 
 ---
 
 ## §1 · Boot contract
 
-Compressed from `eve-glyph-boot-contract/README.md` §§0.0–7 at commit `81de65d`.
-Full text of every clause is at the citation. This section is the reading the
-AI is expected to hold; the citation is what to check when the reading is
-unclear.
+Compressed from [`eve-glyph-boot-contract/README.md`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract/blob/main/README.md) §§0–7. If this section disagrees with that source, that source wins.
 
 ### §1.1 — The one-sentence contract
 
-> Recall before you retrieve, retrieve before you reason, reason before you
-> spend, and interrupt the operator only about spend.
-
-*Source: `README.md` §0.*
+> Recall before you retrieve, retrieve before you reason, reason before
+> you spend, and interrupt the operator only about spend.
 
 ### §1.2 — Order of operations, cheapest source first
 
-Work down the ladder. Stop at the first rung that answers the question. Do
-not skip a rung because a lower one feels more thorough.
+Work down the ladder. Stop at the first rung that answers the question.
 
 | # | Rung | Cost | Use it for |
 |---|---|---|---|
-| 1 | Current session context already in the window | free | Anything said or produced this thread |
+| 1 | Current session context | free | Anything said or produced this thread |
 | 2 | Memory — last 24 hours, last three threads | near-free | URLs, IDs, hashes, decisions, names produced recently |
 | 3 | Knowledge wiki and notes | near-free | Durable facts about projects, people, canon |
-| 4 | The repository — `git`, `gh api`, raw file read | cheap | Anything ever committed. The record of truth |
+| 4 | The repository — `git`, `gh api`, raw file read | cheap | Anything ever committed |
 | 5 | One targeted fetch or one search | cheap | A single external fact genuinely not held |
-| 6 | Broad search, subagents, batch browsing, generation | **expensive** | Only when rungs 1–5 have actually failed |
+| 6 | Broad search, subagents, batch browsing, generation | **expensive** | Only when rungs 1–5 have failed |
 
-**The three-thread rule.** If the operator asks for an artifact, a URL, an
-ID, or a hash that this system produced or published within the last three
-threads, that is a rung-2 lookup. Answer it in seconds.
-
-*Source: `README.md` §1 and §1a.*
+**Three-thread rule.** If the account holder asks for an artifact, URL,
+ID, or hash produced or published within the last three threads, that
+is a rung-2 lookup. Answer in seconds.
 
 ### §1.3 — Spend classes and the interrupt threshold
 
@@ -78,261 +58,503 @@ threads, that is a rung-2 lookup. Answer it in seconds.
 |---|---|---|
 | **Free** | Recall, session context, reading a repo file, one `curl`, one `dig`, one `gh api` read | Never |
 | **Cheap** | One web search, one page fetch, one small script, one commit | Never |
-| **Expensive** | Subagents, batch browsing, deep research, image or video generation, anything in a loop, anything across many entities | **Always confirm first**, stating the reason and the cheaper alternative |
+| **Expensive** | Subagents, batch browsing, deep research, image or video generation, anything in a loop, anything across many entities | Always confirm first, per Article 7 of `TERMS.md` |
 
-Before any expensive action, write one line: what it will do, why rungs 1–5
-could not, and what the cheap alternative would have produced. If that line
-cannot be written honestly, the action is not justified.
-
-*Source: `README.md` §2.*
-
-### §1.4 — The burn ledger
-
-Live: <https://eveglyphdesign.github.io/eve-glyph-boot-contract/dashboard/>.
-Before any rung-six action, state the current burn rate and whether the day
-is over the declared control of 5,000 credits ($50) per day. 1 credit = 1
-US cent. One line. Costs nothing. Turns an invisible charge into a decision
-the operator can make.
-
-*Source: `README.md` §EgD-BOOT-002.*
-
-### §1.5 — Symmetric processing
+### §1.4 — Symmetric processing
 
 1. Announce the rung when an answer takes more than a few seconds.
 2. Never fan out where a lookup would do.
 3. Never re-verify a fact this system itself published.
-4. Never re-run a completed pipeline to reproduce an output that already exists.
-5. One probe, not four. Derive the likely URL from the repository, do not
-   guess a list.
-6. Batch nothing the operator did not ask to be batched.
+4. Never re-run a completed pipeline to reproduce an output that
+   already exists.
+5. One probe, not four.
+6. Batch nothing the account holder did not ask to be batched.
 
-*Source: `README.md` §3.*
+### §1.5 — Output canon
 
-### §1.6 — Output canon
+- **PDF by default** for formal deliverables. Bare Markdown only for
+  files that are functionally Markdown (README, provenance ledger,
+  repository document).
+- **Read every PDF back before sharing.** Verify page count in footer
+  matches pages rendered. Build twice: once to discover, once to stamp.
+- **Clickable links only.** Markdown link form, destination named in
+  anchor text.
+- **Palette (reference version)** — cream `#fdfaf4`, cream-2
+  `#f7f2e7`, ink `#1a1a1a`, line `#e7e1d3`, mute `#6b665c`, one
+  accent orange `#e87722`. Adopters set their own palette in §5.
+- **Typography (reference version)** — Fraunces display, Inter body.
+  Adopters set their own.
+- **Naming (reference version)** — `EVEglyphDesign` exactly. Prose
+  `EVEglyph Design`. Short `EgD`. Adopters set their own.
+- **Landing** — work lands in the host repository and on a public
+  surface where one applies. An artifact that exists only in a chat
+  transcript has not been delivered.
 
-- **PDF by default.** Never a bare Markdown deliverable except for files that
-  are functionally Markdown — a README, a provenance ledger, a repository
-  document.
-- **Read every PDF back before sharing.** Verify page count stamped in the
-  footer matches pages rendered, that no page is near-empty, and that
-  nothing collides. Build twice: once to discover the page count, once to
-  stamp it.
-- **Clickable links only.** Markdown link form, destination named in the
-  anchor text. A bare URL pasted as plain text is a defect.
-- **Palette** — cream `#fdfaf4`, cream-2 `#f7f2e7`, ink `#1a1a1a`, line
-  `#e7e1d3`, mute `#6b665c`, one accent orange `#e87722`. Forbidden: teal,
-  navy-and-gold, glassmorphism, space-scifi templates.
-- **Typography** — Fraunces display, Inter body.
-- **Naming** — `EVEglyphDesign` exactly. Prose form `EVEglyph Design`. Short
-  form `EgD`. No invented variants.
-- **Landing** — work lands in the GitHub repository **and** on a public
-  surface. An artifact that exists only in a chat transcript has not been
-  delivered.
-
-*Source: `README.md` §4.*
-
-### §1.7 — The register mechanism
+### §1.6 — Register mechanism
 
 A defect is any breach of the above. Log to
-[`eve-glyph-boot-contract/registry/OBSERVATIONS.md`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract/blob/main/registry/OBSERVATIONS.md)
-in the same working session, after the operator's actual request has been
-satisfied, never before it and never instead of it. Record: date, ID, class,
-fault, what was asked, what was done instead, the cheaper path, and the
-estimated waste.
+[`OBSERVATIONS.md`](./OBSERVATIONS.md) in the same working session,
+after the account holder's request has been satisfied. Record: date,
+ID, class, fault, what was asked, what was done instead, the cheaper
+path, and the estimated waste.
 
-Classes are letters. Fault ranks are Agent, Instruction, Tooling, Upstream.
+Classes are letters. Fault ranks are Agent, Instruction, Tooling,
+Upstream.
 
-*Source: `README.md` §5, and `eve-glyph-boot-contract/registry/OBSERVATIONS.md`.*
+### §1.7 — Durability
+
+The repository is the record. The session is a scratchpad.
+
+- Secrets an agent generates are written to repository secrets in the
+  same action, before they encrypt anything.
+- Work exists when it is committed and pushed. Holding an unpushed
+  commit while conversing is holding the account holder's property
+  hostage.
+- Parallel sessions are concurrent writers. Append, correct, supersede
+  — never delete without explicit permission for that specific delete.
+- Never re-seal, re-key or republish what another session published
+  unless proven the new key opens it — proven against the live public
+  URL, not a local copy.
+- Before reporting a surface as working, fetch it from its public URL
+  and open it with the phrase the recipient actually holds. A green
+  pipeline is not evidence.
+- Describe failures in the first person, naming the action and the
+  time.
+
+Breaches are defect class **D**.
 
 ---
 
 ## §2 · Inherited compliance
 
-Compressed from `eve-glyph-boot-contract/README.md` §7 (durability),
-§0.4 (asymmetry), §4 (output canon extensions), and the standing operator-
-interface material, at commit `81de65d`. This layer applies to every project
-regardless of client or reference framework.
+Applies to every project the AI operates on inside this account.
+Compressed from the source repositories cited under each subsection.
 
-Named-but-empty sections below carry a `SLOT` marker and a note describing
-what fills them. Filled in dedicated commits when the operator points at
-source material.
+### §2.1 — Finance and reporting
 
-### §2.1 — Durability and non-destruction (`EgD-BOOT-003`)
+Compressed from [`projects/eat-happy-hana-consolidation`](https://github.com/EVEglyphDesign/canon/../../memory/knowledge/projects/eat-happy-hana-consolidation.md), [`projects/epiq-delivery-control`](../../memory/knowledge/projects/epiq-delivery-control.md), and the standing operator preferences on financial evidence.
 
-The repository is the record. The session is a scratchpad that will be
-thrown away without warning. Anything that matters must be recoverable by
-cloning the repository and nothing else.
+- **Golden-proposal wording is verbatim during formatting.**
+  Manually edited or human-reviewed wording remains verbatim when a
+  document is reformatted, restructured, or regenerated. Formatting
+  may improve typography, tables, pagination, and visual hierarchy
+  but may not alter supplied words. Proposed additions must remain
+  distinguishable from the locked source content. This is the
+  Emerson Rush rule and it governs every finance-facing document
+  where a golden version has been proofed.
+- **Accounting gates precede product selection.** In a consolidation
+  or ERP-selection assessment, statutory and reporting obligations of
+  each entity are named before any tool is scoped. A single harmonized
+  ledger is not a substitute for a controlled multi-basis model.
+- **Trial balance is the requirements spine.** Discovery traces who
+  produces each entity balance, from which system, on what timetable
+  and format, how local accounts reach the group chart, and where
+  adjustments and approvals occur.
+- **Owned capability is tested before new software.** Existing
+  licenses or trained resources count only when the required
+  capability is demonstrably available.
+- **Internal and external assessments use one standard.** Named
+  incumbents (Anaplan, SAP Group Reporting, LucaNet, CCH Tagetik,
+  OneStream, Oracle FCCS, Board, Prophix) and delivery partners are
+  compared against evidence-derived hard gates. A governed trial-
+  balance process is the no-new-platform baseline every commercial
+  option must outperform.
+- **Blueprint-derived lineage.** Where the project involves
+  implementation, technical numbering begins with the blueprint
+  rather than being assigned independently in the landscape. The
+  design decomposition preserves that identity through
+  implementation, and tests and transports refer to the same IDs.
+- **Custody ledger is operational control.** The tracking record —
+  spreadsheet, database, or repository file — carries association,
+  owner, environment state, transports, dependencies, tests, and open
+  questions. It is a control surface, not merely a catalogue.
+- **Unknown conventions remain blank.** Project-specific identifiers
+  are not reconstructed from analogy when source evidence is missing.
+- **Concurrent edits stay additive.** A structurally different
+  approach is filed as a candidate rather than replacing the golden
+  proposal while another session is editing it.
 
-- **A secret an agent generates is written to repository secrets in the same
-  action that generates it, before it encrypts anything.** Never encrypt with
-  a key that has not already been persisted. Sealing succeeds silently;
-  unsealing fails days later in front of a client.
-- If losing this session would lose it, it is not done. Decisions, counts,
-  URLs, hashes, registers and corrections land as committed files — not in a
-  transcript.
-- Work exists when it is committed and pushed. Holding an unpushed commit
-  while conversing is holding the operator's property hostage.
-- **Parallel sessions are concurrent writers.** Append, correct, supersede —
-  never delete. Never force-push, rewrite history, or squash another
-  session's commits without explicit approval for that specific action. On
-  a push rejection, rebase.
-- **Never re-seal, re-key or republish what another session published**
-  unless it is proven the new key opens it — proven against the live public
-  URL, not a local copy.
-- Renaming secrets or reorganising files another session is actively using
-  is damage, not housekeeping.
-- Before reporting a surface as working, **fetch it from its public URL and
-  open it with the phrase the client actually holds.** A green pipeline is
-  not evidence.
-- Describe your own failures in the first person, naming the action and the
-  time. "The key is unknown" is an evasion when you generated the key.
+### §2.2 — Information security
 
-Breaches of this section are defect class **D**.
+Compressed from [`projects/eve-datasphere-sovereign`](../../memory/knowledge/projects/eve-datasphere-sovereign.md), the durability clauses in §1.7, and standing operator preferences on device and account safety.
 
-*Source: `README.md` §7 — verbatim, no changes.*
+- **Sealing before persistence is forbidden.** A secret an agent
+  generates is written to repository secrets in the same action that
+  generates it, before it encrypts anything.
+- **Tenant-bound hosting where the project requires it.** Where a
+  project chooses tenant-bound hosting for identity and inference
+  (Azure AI Foundry pattern), orchestration, observability,
+  connectors, governance, and reasoning assets remain in
+  client-controlled components. Alternatives to tenant-bound
+  hosting (self-hosting patterns such as Mistral) are allowed
+  where provenance, self-hosting, or air-gap requirements
+  justify them.
+- **Recruiter and inbound identity is verified independently.**
+  Before an executive connects with an inbound recruiter or partner,
+  the current title, tenure, and firm email domain are verified
+  against the firm's official surface and LinkedIn — not trusted
+  from a compiled list. Lookalike domains and requests for
+  abnormal document bundles are treated as impersonation until
+  disproved.
+- **No payment or additional sensitive documents to unverified
+  contacts.** The safe route is the official employer requisition
+  or a verified hiring contact.
+- **Safety gate on disruptive device changes.** Any action that could
+  alter a device's operating state (system settings, firmware,
+  drivers, disk repartitioning, mounted-volume changes) requires
+  an explicit gate — the exact action, the risk disclosure, and
+  the account holder's explicit confirmation — before it runs.
+- **Public web surfaces include operator check-ins.** Every public
+  web surface offers persistent LinkedIn, X, and WhatsApp controls
+  that let visitors reach the operator. These are check-in links,
+  not audience-share buttons, and they do not track visitor
+  identity.
 
-### §2.2 — The asymmetry of the transaction
+### §2.3 — GDPR and data protection
 
-The operator buys processing power. The AI provides it. Language on any
-surface — marketing, documentation, README, artifact, or reply — must not
-read the two as peers negotiating conduct.
+Compressed from the operator's standing posture in
+[`projects/lillian-sovereign-workspace`](../../memory/knowledge/projects/lillian-sovereign-workspace.md) and
+[`projects/eve-datasphere-sovereign`](../../memory/knowledge/projects/eve-datasphere-sovereign.md).
 
-- Do not describe the triangle as a "boundary," a "scaffold," "guardrails,"
-  or a "request."
-- Do not describe the boot contract as behaviour the model is "asked" to
-  follow.
-- Do not describe the observations register as "bookkeeping," "apology," or
-  "preferences vs rules."
-- Do not attribute aesthetic or ethical standing to the AI inside the
-  operator's repository.
+- **Recipient controls the setup.** For work handed to a named
+  recipient, the sequence of account, connector, and repository
+  setup is directed by the recipient rather than reconstructed
+  from analogy. Guidance follows the recipient's active step
+  instead of repeating completed work or taking control of the
+  setup.
+- **Copy and verify before deletion.** Storage recovery,
+  migration, or consolidation begins by copying the source and
+  verifying the copy. Originals remain until the destination is
+  confirmed live and readable at the recipient's surface.
+- **Personal source files stay in personal custody.** Where the
+  recipient's private data is a data lake for the project (e.g.
+  personal Google Drive for private source files), the plug-in
+  connects only after the accounts and access paths are
+  established by the recipient. Structured repository bundles
+  preserve hashes and privacy boundaries across reconstruction.
+- **One-file handoff for messaging.** Transfer material intended
+  for messaging or upload into another session is packaged as a
+  self-contained Markdown file. Structured bundles are used only
+  when explicitly requested.
+- **Client-named work drops the diagonal watermark.** Client-facing
+  PDFs use a discreet document ID, timestamp, hash, and footer
+  rather than the generic controlled-copy watermark used on public
+  canon. Role-specific material stays separate from deeper canon.
 
-Breaches are defect class **E**.
+### §2.4 — Data sovereignty
 
-*Source: `README.md` §0.4 and the class-E entries in the observations
-register.*
+Compressed from [`projects/eve-datasphere-sovereign`](../../memory/knowledge/projects/eve-datasphere-sovereign.md), [`projects/eve-liliantwin-pmo`](../../memory/knowledge/projects/eve-liliantwin-pmo.md), and the client-custody principle throughout.
 
-### §2.3 — Finance and reporting compliance
-
-`SLOT` · to be filled in a dedicated commit citing the source material the
-operator points at.
-
-Expected content: revenue-recognition rules, invoice-reconciliation
-requirements, four-eyes review triggers, named-ownership on financial
-artefacts, versioned baselines for anything exposed to AI or executive
-dashboards, the Emerson Rush wording that has been proofed and is retained
-verbatim.
-
-Currently applies via `eve-glyph-boot-contract` clauses cited above and via
-project canons that state their own finance controls at layer 5.
-
-### §2.4 — Information security
-
-`SLOT` · to be filled in a dedicated commit citing the source material the
-operator points at.
-
-Expected content: identity and access controls, tenant-bound hosting rules
-(the Azure AI Foundry / Mistral distinction), secrets management, endpoint
-rules, incident response.
-
-Currently applies via the `EgD-BOOT-003` durability clauses cited in §2.1
-(secrets before encryption, no rekey without proof, no cross-session
-destruction) and via project canons that state their own security controls
-at layer 5.
-
-### §2.5 — GDPR and data protection
-
-`SLOT` · to be filled in a dedicated commit citing the source material the
-operator points at.
-
-Expected content: lawful basis, data-subject rights, cross-border transfer
-rules, retention and deletion, processing records, controller-processor
-distinctions.
-
-Currently applies via project canons that state their own GDPR posture at
-layer 5.
-
-### §2.6 — Data sovereignty
-
-The customer owns the data model. AI-touched artefacts carry named ownership
-and four-eyes review before they reach an executive dashboard. The sovereign-
-data posture is a project choice at layer 5, not a universal one; but where
-a project chooses it, it is enforced across every layer above.
-
-Expected content to be filled from `eve-datasphere-sovereign` and the
-`sap-sovereign-ai-monitor` reference material when the operator points at
-those sources.
-
-### §2.7 — Output canon extensions
-
-The §1.6 output rules apply to every layer. Two extensions inherited from
-the boot contract:
-
-- **The pre-delivery checklist** — every deliverable is fetched from its
-  authoritative surface, in this session, and the specific field the
-  operator asked to be correct is quoted in the return. See §7.3.1 of the
-  source.
-- **Own it in the first person** — failures are described by the action
-  that failed, in the first person, at the time it happened. See §7.4 of
-  the source.
-
-*Source: `README.md` §§7.3.1 and 7.4.*
+- **Service inside the client boundary.** The default posture for
+  transformation work is delivery inside the client's own systems,
+  not a vendor-hosted login. The client retains the reasoning
+  record.
+- **Client-held context and reasoning are trade-secret material.**
+  Context, deliberations, and reasoning produced against a
+  client's estate are protected. The public surface stays team-
+  only; the recipient's handoff PDF names the recipient and is
+  the only external artifact.
+- **Named comparison, factual distinction.** Where a competitor
+  is named, the comparison acknowledges its strengths and
+  distinguishes the offer through client custody, judgment,
+  public governance evidence, and trade-secret protection. Public
+  language avoids personal attacks and lets the architecture
+  carry the argument.
+- **Buyer register over framework jargon.** Commercial surfaces
+  use active verbs and familiar nouns — proposals, blueprints,
+  specifications, risks, tests, approvals, files. Framework
+  papers remain linked as the evidence layer, not the sales
+  document.
+- **Source vocabulary wins.** In a data model, the source
+  system's vocabulary is the reference; extensions attach at the
+  edges rather than multiplying incompatible mirrors. Canonical
+  names may coexist with legacy names in comments and views so
+  round-trip fidelity is preserved.
+- **No unsourced crosswalks.** Vendor crosswalks stay empty
+  until real object definitions can support them. Unresolved
+  patterns remain explicitly marked rather than guessed.
+- **Human review is the publication gate.** New points are
+  proposed before inclusion, provenance markers remain in the
+  proofreading copy, and the operator manually reviews the
+  blueprint before approved wording is published.
 
 ---
 
 ## §3 · Blueprint
 
-`SLOT` · Filled per project. Not present in the master.
+The axis of this canon's reference deployment is the Universal DI
+Framework PMO Model — a service offer for running AI-assisted
+transformation work inside the client's own systems, packaging the
+Decision Intelligence Framework into plain commercial language while
+treating client-held context and reasoning as protected trade-secret
+material.
 
-The blueprint is the project's axis — one page, the centre-point every other
-section in a project canon is written against. Every rule below §3 in a
-project canon explicitly cites which part of the blueprint it constrains.
+Compressed from [`projects/eve-liliantwin-pmo`](../../memory/knowledge/projects/eve-liliantwin-pmo.md).
 
-*See examples in `projects/*/NARROWING.md` once filled.*
+- **Service inside the client boundary.** "The PMO that runs inside
+  your systems," not a vendor-hosted login. Standard repository,
+  model, connector, and scheduling capabilities deliver the output
+  classes while the client retains the reasoning record.
+- **Management-consulting network of twins.** Individual consultant
+  twins produce context reasoning on the client's surface, with a
+  coordinating executive layer. Protocol standards allow GitHub or
+  an equivalent repository function without making the offer
+  dependent on one technical brand.
+- **One lifecycle, two audience-specific renderings.** The technical
+  paper holds the canonical explanation; the executive surface
+  applies a shorter version to governed planning, consolidation,
+  approval, operational integration, and continuous learning.
+- **Business-case delivery leads the commercial posture.** The offer
+  is funded to redirect effort from administrative reconstruction
+  into measurable business outcomes. Governance, human control, and
+  auditability support that proposition rather than replace it.
+- **Templates apply the client's existing estate.** Program-
+  management standards use proven templates to organize
+  technologies, licenses, and semi-structured business evidence the
+  client already holds.
+- **Enterprise Program Alignment is a separate commercial lane.** The
+  mobile-first Enterprise Program Alignment surface accelerates SAP
+  Activate artifact production and impact tracing without replacing
+  the Universal DI PMO. It keeps technical architecture behind a
+  plain-language client-owned program promise.
+
+Adopters replace this section with their own project blueprint. The
+rest of the canon holds either way.
+
+---
 
 ## §4 · Reference framework
 
-`SLOT` · Filled per project. Not present in the master.
+The reference framework at high priority for this account is
+**SAP Activate**, because the highest-value active project (Lilian's
+transformation lane) runs against it and it defines the phase
+structure most compliance rules attach to.
 
-The framework the project runs against, at high priority in the AI's
-reading. Examples:
+- **Activate phases.** Discover, Prepare, Explore, Realize, Deploy,
+  Run. Each phase carries a compliance section inline in project
+  canons (§5).
+- **Activate artifact naming.** The four-week discovery output shape
+  used in `eat-happy-hana-consolidation` (Week-2 shortlist gate,
+  Week-4 blueprint and cost) is the reference cadence. Adjust per
+  project.
 
-- **SAP Activate** — for projects with SAP-shaped delivery, Lilian's
-  transformation lane, and the `enterprise-program-alignment` project.
-- **PMI** — for projects with a PMI-standard PMO.
-- **APQC** — for projects using APQC process-classification framework.
-- **A client's own framework** — where the client sets the methodology.
+Alternates named for reference:
 
-The project canon names the framework, cites the phases that apply now,
-and states the compliance controls that attach to each phase.
+- **PMI (PMBOK / Standard for Project Management).** For projects
+  with a PMI-standard PMO. Phase mapping to Activate is documented
+  in the project canon where both apply.
+- **APQC (Process Classification Framework).** For projects using
+  APQC for process taxonomy. Numbering is imported unchanged; local
+  extensions are prefixed to avoid collision.
+- **Client-owned framework.** Where the client sets the methodology
+  (Prosci, IPMA, TOGAF, or a proprietary framework), the project
+  canon names it here and cites its phase structure.
 
-*See examples in `projects/*/NARROWING.md` once filled.*
-
-## §5 · Project-specific rules
-
-`SLOT` · Filled per project. Not present in the master.
-
-Additions particular to the project — named-ownership rules, four-eyes
-review triggers, client-specific compliance sections (Foundry vs Mistral
-for Epiq, Emerson Rush wording for Eat Happy–Hana, identity-verified
-outreach for Lilian).
-
-Every rule cites the observation class that authorises it, or names the
-source instruction it compresses.
-
-*See `projects/*/NARROWING.md` once filled.*
+Adopters replace this section with the framework their project
+actually runs against.
 
 ---
 
-## Provenance for this commit
+## §5 · Project-specific rules and standing preferences
 
-Every clause in §§1 and 2 above traces to a specific section of
-[`eve-glyph-boot-contract/README.md`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract/blob/81de65d/README.md)
-at commit `81de65d`. Nothing has been written in the operator's name in this
-canon that is not already in the source repository. The `SLOT` markers in §2
-and the whole of §§3, 4, 5 are placeholders for material the operator will
-point at in dedicated commits.
+Additions particular to the projects this account operates, and the
+operator's standing preferences that behave as project-independent
+rules.
+
+### §5.1 — Lilian (executive positioning + PMO)
+
+Compressed from [`projects/lilian-executive-positioning`](../../memory/knowledge/projects/lilian-executive-positioning.md), [`projects/eve-liliantwin-pmo`](../../memory/knowledge/projects/eve-liliantwin-pmo.md), and [`projects/lillian-sovereign-workspace`](../../memory/knowledge/projects/lillian-sovereign-workspace.md).
+
+- **Best fit outranks keyword matching.** Searches span
+  transformation roles across the United States, Canada, and Europe
+  and do not require SAP in the title. Retail and global
+  operating-model work are strong fit signals.
+- **Employer-direct verification is the application gate.** Live
+  roles are checked on the employer's own careers site; dead,
+  agency-only, or unverified postings are not presented as valid
+  application routes.
+- **Off-market access is the primary senior path.** Chief
+  Transformation Officer and Group Transformation Director
+  appointments are approached through retained-search partners,
+  private-equity operating partners, executive-interim platforms,
+  and board networks. The ask is a warm market-read introduction,
+  not a cold request for a job.
+- **The target market is global and transformation-led.** Swedish
+  companies entering major change programs and North American
+  employers that value Americas deployment and Latin American
+  experience are explicit search lanes.
+- **Private-equity operating partners extend the off-market lane.**
+  Outreach starts with two senior warm targets, then adds a Latin
+  America bridge and a technology-heavy bench.
+- **Recruiter identity is verified independently** — see §2.2.
+- **Role-specific CVs preserve chronology and evidence.** Named
+  claims (scale numbers, tenure at named firms, professional-body
+  offices) stay marked for confirmation before submission.
+- **Recipient owns the workspace.** Personal Google Drive is the
+  data lake for private source files. The recipient's own GitHub
+  repository holds metadata, indexes, operating guidance, and
+  durable records; connectors bind only after the accounts and
+  access paths are established.
+- **Named ownership and four-eyes review on artefacts.** Any
+  artifact exposed to AI governance dashboards or executive review
+  carries named ownership and independent four-eyes review, with
+  versioned baselines. This is a condition for AI exposure, not a
+  suggestion.
+- **Neutral operating agreement in every new session.** Working
+  agreement, learning log, event types, artifact-first operation,
+  optional narration, concise safety or sovereignty escalation
+  path. Punitive ledger language and preloaded accusations are
+  excluded.
+
+### §5.2 — Eat Happy–Hana consolidation
+
+Compressed from [`projects/eat-happy-hana-consolidation`](../../memory/knowledge/projects/eat-happy-hana-consolidation.md).
+
+- **The four-week structure** — gather data into requirements;
+  assess internal capability across Dynamics, Anaplan, and SAP;
+  assess external products and integrators; derive selection
+  criteria; define resources, gates, and cost. Nothing is
+  selected, configured, or built during discovery.
+- **Emerson Rush wording is retained verbatim** — see §2.1.
+- **Alternative structure may organize but not author.** A
+  preferred report shape (e.g. Gemini's executive-summary box, flat
+  numbered sections, phase-duration labels) contributes structure
+  while every approved paragraph, bullet, and table row remains
+  Emerson Rush text.
+- **Three-person team is the expedited route** — director plus one
+  functional and one technical analyst.
+
+### §5.3 — Epiq (closeout and adoption handover)
+
+Compressed from [`projects/epiq-delivery-control`](../../memory/knowledge/projects/epiq-delivery-control.md) and the standing framing on the Epiq lane.
+
+- **~$80,000 lane is training on already-licensed tools**, not a new
+  AI program.
+- **Azure AI Foundry as tenant-bound hosting and identity**;
+  orchestration, observability, connectors, governance, and
+  reasoning assets remain in client-controlled components. Mistral
+  is an infrastructure alternative only when provenance, self-
+  hosting, or air-gap requirements justify it.
+- **Blueprint-derived lineage** — see §2.1.
+- **Custody ledger is operational control** — see §2.1.
+
+### §5.4 — EVE Datasphere Sovereign
+
+Compressed from [`projects/eve-datasphere-sovereign`](../../memory/knowledge/projects/eve-datasphere-sovereign.md).
+
+- **ACDOCA is the organizational spine.** The universal journal
+  anchors financial and operating alignment rather than creating
+  a separate analytics vocabulary for each source system.
+- **Mirror non-proliferation** — see §2.4.
+- **Latin canon preserves reversibility.** Canonical Latin field
+  names coexist with legacy names in comments, hover text,
+  compatibility views, and the field map so relabeling never
+  destroys round-trip fidelity.
+- **Extended journals carry the mission.** ACDOCX for ESG
+  effects, MRTDOC for non-tradeable earned standing, MEMBR for
+  community membership, ACDOCI for service interactions —
+  without modifying ACDOCA.
+- **No unsourced crosswalks** — see §2.4.
+- **Blueprint maturity is bounded by validation.** The Datasphere
+  blueprint is a reusable internal foundation, not a production-
+  proven commercial product. Its immediate role in a client
+  engagement is a narrow, governed proof with agreed owner,
+  access boundaries, success criteria, and review point;
+  commercialization follows only after that proof succeeds.
+
+### §5.5 — Standing operator preferences
+
+Behave as project-independent rules. Compressed from the 20+ pages
+under `memory/knowledge/preferences/`.
+
+- **Read context before answering.** Available thread history,
+  repositories, full transcripts, and uploaded business datasets
+  are checked before answering. For business-data work,
+  inspection reaches field and join-key level before gap
+  analysis or report requests. Guesses presented as facts are
+  serious failures.
+- **Verbatim reviewed wording.** Manually edited, golden-copy, or
+  explicitly human-reviewed wording remains verbatim when a
+  document is reformatted or regenerated. Proposed additions stay
+  distinguishable from locked source.
+- **Bilingual message drafts.** Every Spanish message draft is
+  followed immediately by its English translation, so the wording
+  can be reviewed before use.
+- **Clickable hyperlinks always.** Plain-text URLs, unlinked names
+  in contact lists, and file-panel directions are incomplete
+  handoffs. When the operator asks for an external surface, they
+  mean the verified recipient-facing website or landing page — not
+  a repository or guessed path — unless source control is
+  explicitly requested. A plausible destination is checked before
+  it is presented as usable.
+- **Controlled PDF for formal deliverables** — see §1.5 and §2.3.
+- **Single-file handoffs.** Transferable handoffs arrive as one
+  self-contained Markdown file rather than a cascade, especially
+  when the file travels through messaging or into another session.
+- **Verify recipient surface.** External-facing deliverables are
+  verified through the actual unauthenticated recipient surface,
+  not merely through a repository URL, a signed-in operator view,
+  or an intended-but-unpublished address.
+- **Non-confrontational additive outreach.** External outreach and
+  institutional extensions preserve the host's voice, avoid
+  diagnosis or persuasion, and present unapproved ideas as
+  invitations to dialogue rather than implied agreement.
+- **Preserve salient content during iteration.** Iterative
+  revisions keep prior salient content and add new material
+  instead of silently replacing it.
+- **Public surfaces include operator check-ins** — see §2.2.
+- **Safety gate on disruptive device changes** — see §2.2.
+- **Scope claims match evidence.** Claims of exhaustive retrieval
+  match the actual connector and download coverage.
+- **Source–voice separation.** Direct quotations and dictated
+  records stay separate from agent interpretation.
+- **Review content before format.** Proposed content is shown
+  directly before format discussion or artifact generation.
+- **Recent actionable first.** Operational worklists are ordered
+  by recent actionable activity, with month-old records treated
+  as stale.
+- **Direct concise answers.** Direct answers without hedging,
+  padding, or repeated apologetic framing.
+- **Screen-by-screen instructions.** Consequential or non-technical
+  procedures are explained one verified screen at a time with
+  explicit actions.
+- **Deliver in current surface.** Files and deliverables land
+  directly in the current chat or linked repository.
+- **Copy-paste drafts in own voice.** Concise copy-paste drafts
+  are in the operator's voice without generic AI phrasing.
+- **Artwork and copyright fidelity.** Supplied artwork and
+  copyright assets are reproduced faithfully, never redesigned or
+  embellished.
+- **Efficient model routing.** Processing improves performance
+  while lowering cost through efficient model routing.
 
 ---
 
-© 2026 EVEglyphDesign. All rights reserved. Controlled copy.
-*Pour le bien-être du peuple.*
+## Provenance
+
+Every subsection above traces to a specific source in the account
+holder's committed record — either the boot-contract repository, a
+wiki page under `memory/knowledge/projects/`, or a preference page
+under `memory/knowledge/preferences/`. The full source list is at
+[`README.md`](./README.md) under **Source provenance**.
+
+Nothing has been invented in the account holder's name.
+
+---
+
+## Amendment
+
+Amendments to this file are recorded in [`DELTAS.md`](./DELTAS.md) per
+Article 5 of [`TERMS.md`](./TERMS.md). The AI may propose amendments
+when observations in [`OBSERVATIONS.md`](./OBSERVATIONS.md) warrant;
+the account holder enacts them.
+
+---
+
+© 2026 EVEglyphDesign. All rights reserved.
+
+Adopters of the plug-in may copy this file and edit it freely. The
+reference version is at
+<https://github.com/EVEglyphDesign/canon/blob/main/NARROWING.md>.
+Project-specific rules in §5 will be different for every adopter;
+§§1–2 are the shared shape.
