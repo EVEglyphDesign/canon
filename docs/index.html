@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
 <title>canon — the plug-in · EVEglyphDesign</title>
-<meta name="description" content="A layout-agnostic four-file plug-in that gives any AI surface a safe, effective operating shape on the agreed terms and conditions between the account holder and the AI.">
+<meta name="description" content="A layout-agnostic two-file plug-in that gives any AI surface a safe, effective operating shape on the agreed terms and conditions between the account holder and the AI. The project-scale version of the sovereign-starter method.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -34,6 +34,7 @@
   .kicker { font-family: 'Inter', sans-serif; font-size: 12px; letter-spacing: 0.16em; text-transform: uppercase; color: var(--mute); margin-bottom: 12px; }
   h1 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 52px; line-height: 1.05; letter-spacing: -0.02em; margin: 0 0 16px; }
   .lede { font-family: 'Fraunces', serif; font-size: 22px; line-height: 1.4; font-weight: 400; color: var(--ink); margin: 0; max-width: 640px; }
+  .lede + .lede { margin-top: 12px; }
   h2 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 28px; line-height: 1.15; letter-spacing: -0.01em; margin: 56px 0 20px; }
   h3 { font-family: 'Fraunces', serif; font-weight: 500; font-size: 20px; margin: 32px 0 12px; }
   p { margin: 0 0 16px; }
@@ -53,14 +54,14 @@
   .file:hover { border-color: var(--accent); background: var(--cream); }
   .file-name {
     font-family: 'Fraunces', serif;
-    font-size: 22px;
+    font-size: 24px;
     font-weight: 500;
     display: flex;
     align-items: baseline;
     gap: 12px;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
-  .file-order { font-family: 'Inter', sans-serif; font-size: 12px; font-weight: 500; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; }
+  .file-tag { font-family: 'Inter', sans-serif; font-size: 11px; font-weight: 600; color: var(--accent); letter-spacing: 0.08em; text-transform: uppercase; padding: 3px 8px; border: 1px solid var(--accent); border-radius: 2px; }
   .file-desc { color: var(--mute); font-size: 15px; margin: 0; }
   .callout {
     background: var(--cream-2);
@@ -75,6 +76,16 @@
   code { background: var(--cream-2); padding: 2px 6px; border-radius: 3px; }
   pre { background: var(--cream-2); border: 1px solid var(--line); border-radius: 4px; padding: 16px 20px; overflow-x: auto; line-height: 1.5; }
   pre code { background: none; padding: 0; }
+  .lineage {
+    background: var(--cream-2);
+    border: 1px solid var(--line);
+    border-radius: 4px;
+    padding: 20px 24px;
+    margin: 24px 0;
+  }
+  .lineage h3 { margin-top: 0; }
+  .lineage-map { font-family: ui-monospace, monospace; font-size: 14px; margin: 12px 0; }
+  .lineage-map div { padding: 4px 0; }
   footer { margin-top: 80px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--mute); font-size: 13px; }
   footer p { margin: 0 0 6px; }
   .meta { display: flex; flex-wrap: wrap; gap: 6px 16px; margin-top: 12px; }
@@ -92,76 +103,67 @@
 
 <header>
   <div class="kicker">EVEglyphDesign · canon plug-in · v1.0</div>
-  <h1>Four files. Any repository.</h1>
-  <p class="lede">A layout-agnostic drop-in that gives an AI surface a safe, effective operating shape on the agreed terms and conditions between the account holder and the AI.</p>
+  <h1>Two files. Any repository.</h1>
+  <p class="lede">The project-scale version of the <a href="https://github.com/EVEglyphDesign/sovereign-starter">sovereign-starter</a> two-file method — same shape, wider canon.</p>
+  <p class="lede">Drop into any host repo's <code>/canon</code> or <code>/governance</code> directory. Point the AI at <code>CANON.md</code> as its first read. That is the install.</p>
 </header>
 
 <section>
-  <p>Drop the four files into any host repository's <code>/canon</code> or <code>/governance</code> directory. Point the project's AI surface at <a href="TERMS.html">TERMS.md</a> and <a href="NARROWING.html">NARROWING.md</a> as its first reads. That is the whole install.</p>
-
   <div class="callout">
     Recall before you retrieve, retrieve before you reason, reason before you spend, and interrupt the operator only about spend.
   </div>
 </section>
 
 <section>
-  <h2>The four files</h2>
+  <h2>The two files</h2>
   <div class="files">
-    <a class="file" href="https://github.com/EVEglyphDesign/canon/blob/main/TERMS.md">
-      <div class="file-name"><span class="file-order">Read 1</span> TERMS.md</div>
-      <p class="file-desc">The bilateral operating agreement. What the account holder and the AI have agreed to. Nine articles. The frame every other file operates inside.</p>
-    </a>
-    <a class="file" href="https://github.com/EVEglyphDesign/canon/blob/main/NARROWING.md">
-      <div class="file-name"><span class="file-order">Read 2</span> NARROWING.md</div>
-      <p class="file-desc">The canon. Boot contract, inherited compliance (finance, information security, GDPR, data sovereignty), blueprint, reference framework, project-specific rules. Every clause traces to a source.</p>
+    <a class="file" href="https://github.com/EVEglyphDesign/canon/blob/main/CANON.md">
+      <div class="file-name">CANON.md <span class="file-tag">stays with account</span></div>
+      <p class="file-desc">The single first read. Part I — Terms (bilateral agreement, 9 articles). Part II — Narrowing (boot contract, inherited compliance, blueprint, reference framework, project-specific rules and standing preferences).</p>
     </a>
     <a class="file" href="https://github.com/EVEglyphDesign/canon/blob/main/OBSERVATIONS.md">
-      <div class="file-name"><span class="file-order">Read 3</span> OBSERVATIONS.md</div>
-      <p class="file-desc">The evidence base. Every observation of the AI's operation from the account holder's perspective, tagged by class and fault rank. Individual rows may drift; the aggregate is what matters.</p>
-    </a>
-    <a class="file" href="https://github.com/EVEglyphDesign/canon/blob/main/DELTAS.md">
-      <div class="file-name"><span class="file-order">Read 4</span> DELTAS.md</div>
-      <p class="file-desc">The internal delta ledger. Every change to TERMS and NARROWING recorded with what changed, when, why, and what the previous version said. This is what keeps the agreement live.</p>
+      <div class="file-name">OBSERVATIONS.md <span class="file-tag">shareable</span></div>
+      <p class="file-desc">The register. Type-O rows record drift; Type-Δ rows record changes to the canon with prior text verbatim, new text verbatim, and reason. The evidence base and the change ledger in one register. This is the file that travels between contexts.</p>
     </a>
   </div>
 </section>
 
 <section>
-  <h2>Why four files instead of two</h2>
-  <p>The <a href="https://github.com/EVEglyphDesign/sovereign-starter">sovereign-starter kit</a> ships as two files — <code>NARROWING.md</code> and <code>OBSERVATIONS.md</code> — for practitioners starting from scratch. The two-file shape works at any scale.</p>
-  <p>The plug-in adds two more because a project-scale deployment needs what a scratchpad does not:</p>
-  <ul>
-    <li><strong><code>TERMS.md</code></strong> is separated from <code>NARROWING.md</code> because the agreement frame is stable while the rules underneath it accrete. The AI reads <code>TERMS.md</code> once per session; it reads <code>NARROWING.md</code> continuously.</li>
-    <li><strong><code>DELTAS.md</code></strong> is separated from <code>git log</code> because a project canon needs a first-class audit trail — human-readable, keyed to the clause that changed, and citing the observation that authorised the change. <code>git log</code> records that a file changed; <code>DELTAS.md</code> records what the change means for the agreement.</li>
-  </ul>
+  <h2>Relationship to the sovereign-starter</h2>
+  <div class="lineage">
+    <p>The <a href="https://github.com/EVEglyphDesign/sovereign-starter">sovereign-starter</a> kit ships two files as the entry point for practitioners starting from scratch. This plug-in is that same method at project scale.</p>
+    <div class="lineage-map">
+      <div>starter <code>NARROWING.md</code> &nbsp;→&nbsp; plug-in <code>CANON.md</code></div>
+      <div>starter <code>OBSERVATIONS.md</code> &nbsp;→&nbsp; plug-in <code>OBSERVATIONS.md</code></div>
+    </div>
+    <p style="margin-bottom:0">Same role in the loop. The plug-in <code>CANON.md</code> is wider (agreement articles + inherited compliance + blueprint + reference framework + project rules), and the plug-in <code>OBSERVATIONS.md</code> adds Type-Δ rows for change tracking alongside Type-O drift rows. Adopters can start with the two-file kit and grow into this shape, or copy this plug-in wholesale and edit.</p>
+  </div>
 </section>
 
 <section>
   <h2>Install</h2>
   <pre><code># from your host repo's root
 mkdir -p canon
-curl -sL https://raw.githubusercontent.com/EVEglyphDesign/canon/main/TERMS.md        > canon/TERMS.md
-curl -sL https://raw.githubusercontent.com/EVEglyphDesign/canon/main/NARROWING.md    > canon/NARROWING.md
+curl -sL https://raw.githubusercontent.com/EVEglyphDesign/canon/main/CANON.md        > canon/CANON.md
 curl -sL https://raw.githubusercontent.com/EVEglyphDesign/canon/main/OBSERVATIONS.md > canon/OBSERVATIONS.md
-curl -sL https://raw.githubusercontent.com/EVEglyphDesign/canon/main/DELTAS.md       > canon/DELTAS.md
 git add canon && git commit -m "add canon plug-in v1.0"</code></pre>
   <p>Or <code>/governance</code> if that is what your repo calls its policy directory. Or any other name — the plug-in is layout-agnostic.</p>
   <p>Then in the project's AI instructions:</p>
-  <pre><code>Read canon/TERMS.md first, then canon/NARROWING.md,
-before any action.</code></pre>
+  <pre><code>Read canon/CANON.md first, then recent Type-Δ rows
+in canon/OBSERVATIONS.md, before any action.</code></pre>
 </section>
 
 <section>
   <h2>Adopting</h2>
-  <p>Any user can copy the four files into a host repository and edit them freely. The reference version in this repository is EVEglyphDesign's own operating canon — every project-specific rule in §5 of <code>NARROWING.md</code> is EVEglyphDesign's; adopters replace §5 with their own.</p>
-  <p>Sections §1 (boot contract) and §2 (inherited compliance) are the shared shape. Sections §3 (blueprint) and §4 (reference framework) are placeholders adopters fill from their own project.</p>
+  <p>Any user can copy the two files into a host repository and edit them freely. The reference version in this repository is EVEglyphDesign's own operating canon — every project-specific rule in §5 of <code>CANON.md</code> is EVEglyphDesign's; adopters replace §5 with their own.</p>
+  <p>Part I (Terms) and §§1–2 of Part II (boot contract, inherited compliance) are the shared shape. Sections §3 (blueprint) and §4 (reference framework) are placeholders adopters fill from their own project.</p>
   <p>The licence is <a href="https://github.com/EVEglyphDesign/canon/blob/main/LICENSE.md">MIT</a>. The reference-version copyright notice may be removed from copies used inside private repositories.</p>
 </section>
 
 <section>
   <h2>Source of truth</h2>
   <p>The repository is the record: <a href="https://github.com/EVEglyphDesign/canon">github.com/EVEglyphDesign/canon</a>. If this page and the repository disagree, the repository wins.</p>
-  <p>The compressed boot contract in §1 of <code>NARROWING.md</code> is drawn from <a href="https://github.com/EVEglyphDesign/eve-glyph-boot-contract">eve-glyph-boot-contract</a>; if the two disagree, that source wins.</p>
+  <p>The compressed boot contract in §1 of <code>CANON.md</code> is drawn from <a href="https://github.com/EVEglyphDesign/eve-glyph-boot-contract">eve-glyph-boot-contract</a>; if the two disagree, that source wins.</p>
 </section>
 
 <footer>
@@ -169,7 +171,7 @@ before any action.</code></pre>
   <p><em>Pour le bien-être du peuple.</em></p>
   <div class="meta">
     <span>doc: EgD-CANON-SITE</span>
-    <span>v1.0</span>
+    <span>v2.0</span>
     <span>2026-09-12</span>
   </div>
 </footer>
