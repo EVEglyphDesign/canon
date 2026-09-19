@@ -1,0 +1,50 @@
+# Copy to .github/workflows/canon-drift.yml in the host repository.
+#
+# Fails any commit where a generated surface file no longer matches
+# canon/CANON.md. This is EgD-BOOT-006 §5 — "no drift" — enforced by the repo
+# instead of by discipline. A canon that four surfaces can quietly disagree
+# with is four canons.
+
+name: canon drift
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Install PyYAML
+        run: pip install --quiet pyyaml
+
+      - name: Locate the harness
+        id: harness
+        run: |
+          if   [ -f canon/harness/build.py ]; then echo "cmd=canon/harness/build.py" >> "$GITHUB_OUTPUT"
+          elif [ -f harness/build.py ];       then echo "cmd=harness/build.py"       >> "$GITHUB_OUTPUT"
+          else echo "::error::no canon harness found at canon/harness/ or harness/"; exit 1
+          fi
+
+      - name: Surfaces and sizes
+        run: python3 "${{ steps.harness.outputs.cmd }}" --list
+
+      - name: Check every surface against the canon
+        run: python3 "${{ steps.harness.outputs.cmd }}" --check
+
+      - name: Show what regenerating would change
+        if: failure()
+        run: |
+          python3 "${{ steps.harness.outputs.cmd }}" || true
+          echo "::group::diff"
+          git --no-pager diff
+          echo "::endgroup::"
+          echo "::error::Generated surfaces are out of date. Run the build locally and commit the result."
