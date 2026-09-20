@@ -1,0 +1,21 @@
+{
+  "name": "eveglyphdesign",
+  "owner": { "name": "EVEglyphDesign", "url": "https://github.com/EVEglyphDesign" },
+  "metadata": {
+    "description": "One canon, many surfaces. The operating agreement and rules a project team shares across Claude, Copilot and every other AI surface.",
+    "version": "1.0.0"
+  },
+  "plugins": [
+    {
+      "name": "operating-canon",
+      "source": "./",
+      "description": "The operating canon as a loadable skill. Generated from CANON.md by the harness, so it can never disagree with the other surfaces.",
+      "version": "1.0.0",
+      "author": { "name": "EVEglyphDesign", "url": "https://github.com/EVEglyphDesign" },
+      "homepage": "https://github.com/EVEglyphDesign/canon",
+      "license": "MIT",
+      "category": "governance",
+      "keywords": ["governance", "canon", "harness", "compliance"]
+    }
+  ]
+}

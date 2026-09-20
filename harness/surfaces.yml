@@ -1,0 +1,166 @@
+# Surface manifest — which slice of CANON.md each AI surface gets.
+#
+# This file is the whole configuration of the harness. Adding a surface is
+# adding a block here; no code change is needed unless the new surface needs
+# a genuinely different assembly rule.
+#
+# `sections` are matched against CANON.md heading titles as regexes. Matching a
+# heading includes everything under it, down to the next heading of the same or
+# higher level. Order here is the order in the output.
+#
+# `budget` is a soft character ceiling. The build warns past it and fails past
+# `hard_budget`. Always-in-context files (CLAUDE.md, copilot-instructions) are
+# kept small on purpose: every character is paid for on every single turn.
+#
+# Paths are relative to the HOST repository root — the repo this canon was
+# dropped into — not to canon/.
+
+version: 1
+
+defaults:
+  # Prepended to every generated file. {source_sha} and {built} are filled in.
+  provenance: |
+    <!-- GENERATED FILE — DO NOT EDIT.
+         Source: {canon}/CANON.md (sha256 {source_sha})
+         Built by: {canon}/harness/build.py
+         Built at: {built}
+         Edit {canon}/CANON.md and re-run `python3 {canon}/harness/build.py`.
+         CI fails any commit where this file has drifted from its source. -->
+
+surfaces:
+
+  claude-root:
+    path: CLAUDE.md
+    title: Operating canon — read before acting
+    enabled: true
+    budget: 7000
+    hard_budget: 12000
+    lead: |
+      This repository carries an operating canon. It is the frame every answer
+      is built inside, and it wins over general training for work in this repo.
+
+      **Full text:** [`{canon}/CANON.md`]({canon}/CANON.md).
+      **Register:** [`{canon}/OBSERVATIONS.md`]({canon}/OBSERVATIONS.md) — read the
+      recent Type-Δ rows before any action; they are changes to what you are
+      complying with.
+
+      The operative core is reproduced below so it costs no fetch. Everything
+      else — the bilateral terms, inherited compliance, the blueprint, the
+      project rules — is in `{canon}/CANON.md` and in the loadable skill.
+    sections:
+      - '^§1 · Boot contract'
+    tail: |
+      ## Where the rest is
+
+      | Part | Where |
+      |---|---|
+      | Part I — Terms (the bilateral agreement) | `{canon}/CANON.md` |
+      | §2 — Inherited compliance (finance, infosec, GDPR, sovereignty) | `{canon}/CANON.md` |
+      | §3 — Blueprint · §4 — Reference framework | `{canon}/CANON.md` |
+      | §5 — Project-specific rules and standing preferences | `{canon}/CANON.md` |
+
+      Drift, when you see it, is logged as a Type-O row in
+      `{canon}/OBSERVATIONS.md`. Changes to the canon are logged as Type-Δ rows
+      with the prior text verbatim. Three observations of one class sharpen a
+      rule; that is the loop this whole harness exists to close.
+
+  claude-skill:
+    path: skills/operating-canon/SKILL.md
+    title: Operating canon
+    enabled: true
+    budget: 40000
+    hard_budget: 120000
+    frontmatter:
+      name: operating-canon
+      description: >-
+        Load before any work in this repository. The operating canon: the
+        bilateral terms between the account holder and the AI, the boot
+        contract (cheapest-source-first retrieval ladder, spend classes and the
+        interrupt threshold, symmetric processing, output canon), inherited
+        compliance for finance, information security, GDPR and data
+        sovereignty, the component blueprint, the reference framework, and the
+        project-specific rules. Also load when asked about token spend, burn
+        rate, wasted processing, cold starts, drift, defect logging, the
+        observation register, or how a rule in this repository came to exist.
+    lead: |
+      The canonical text is [`{canon}/CANON.md`](../../{canon}/CANON.md). If this
+      skill and that file ever disagree, **that file wins** — read it. Before
+      any action, also read the recent Type-Δ rows in
+      [`{canon}/OBSERVATIONS.md`](../../{canon}/OBSERVATIONS.md).
+    sections:
+      - '^Part I · Terms'
+      - '^§1 · Boot contract'
+      - '^§2 · Inherited compliance'
+      - '^§3 · Blueprint'
+      - '^§4 · Reference framework'
+      - '^§5 · Project-specific rules'
+
+  agents:
+    path: AGENTS.md
+    title: Operating canon for coding agents
+    enabled: true
+    budget: 14000
+    hard_budget: 24000
+    lead: |
+      Vendor-neutral. Read by Claude, Copilot and a growing set of other coding
+      agents. The authoritative text is [`{canon}/CANON.md`]({canon}/CANON.md);
+      this file is a generated slice of it, not a second source.
+
+      Before any action: read the recent Type-Δ rows in
+      [`{canon}/OBSERVATIONS.md`]({canon}/OBSERVATIONS.md).
+    sections:
+      - '^§1 · Boot contract'
+      - '^§2 · Inherited compliance'
+    tail: |
+      ## Not reproduced here
+
+      Part I (the bilateral terms), §3 (blueprint), §4 (reference framework)
+      and §5 (project-specific rules) are in [`{canon}/CANON.md`]({canon}/CANON.md).
+      Read them before making a structural or design decision in this repo.
+
+  copilot:
+    path: .github/copilot-instructions.md
+    title: Operating canon
+    enabled: true
+    budget: 7500
+    hard_budget: 10000
+    lead: |
+      Authoritative text: `{canon}/CANON.md`. This file is a generated slice.
+    sections:
+      - '^§1.1'
+      - '^§1.2'
+      - '^§1.3'
+      - '^§1.5'
+      - '^§2.2 — Information security'
+      - '^§2.4 — Data sovereignty'
+    tail: |
+      Inherited compliance not reproduced here — finance and reporting (§2.1)
+      and GDPR (§2.3) — is in `{canon}/CANON.md`. Read it before touching
+      reporting logic or anything that processes personal data.
+
+      Full canon, blueprint and project rules: `{canon}/CANON.md`.
+      Change register: `{canon}/OBSERVATIONS.md`.
+
+  paste-in:
+    path: '{canon}/PASTE-IN.md'
+    title: Operating canon — self-contained copy
+    enabled: true
+    delink: true          # flatten repo-relative links: this copy leaves the repo
+    budget: 60000
+    hard_budget: 200000
+    lead: |
+      Self-contained. Paste the whole of this file into a Perplexity Space, a
+      ChatGPT Project, or any surface that takes a single block of standing
+      instructions and cannot read this repository.
+
+      Because that surface cannot fetch the repository, nothing here links out.
+      When the canon changes, regenerate this file and re-paste it — the
+      provenance hash at the top is how you tell whether the copy in a Space is
+      current.
+    sections:
+      - '^Part I · Terms'
+      - '^§1 · Boot contract'
+      - '^§2 · Inherited compliance'
+      - '^§3 · Blueprint'
+      - '^§4 · Reference framework'
+      - '^§5 · Project-specific rules'

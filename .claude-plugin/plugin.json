@@ -1,0 +1,10 @@
+{
+  "name": "operating-canon",
+  "description": "EVEglyphDesign's operating canon as a loadable skill: the bilateral terms, the boot contract (retrieval ladder, spend classes, interrupt threshold, output canon), inherited compliance for finance, information security, GDPR and data sovereignty, and the observation register that turns drift into rule changes.",
+  "version": "1.0.0",
+  "author": { "name": "EVEglyphDesign", "url": "https://github.com/EVEglyphDesign" },
+  "homepage": "https://github.com/EVEglyphDesign/canon",
+  "repository": "https://github.com/EVEglyphDesign/canon",
+  "license": "MIT",
+  "keywords": ["governance", "canon", "harness", "spend-control", "compliance", "sap"]
+}
