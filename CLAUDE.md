@@ -1,8 +1,8 @@
 
 <!-- GENERATED FILE — DO NOT EDIT.
-     Source: CANON.md (sha256 28362c43e9ad0904ada255a60b8505820ad191584d546b433752e1d4a58aace6)
+     Source: CANON.md (sha256 afa93066edc24d233479a2e22ee0d14ea3ad23a9bbb895cf59ac3f8e8a660abf)
      Built by: harness/build.py
-     Built at: 2026-09-19T01:59:09Z
+     Built at: 2026-11-18T17:11:27Z
      Edit CANON.md and re-run `python3 harness/build.py`.
      CI fails any commit where this file has drifted from its source. -->
 

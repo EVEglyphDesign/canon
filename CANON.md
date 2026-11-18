@@ -181,8 +181,8 @@ question.
 - **§4 — Reference framework** — SAP Activate as the priority
   reference for transformation programs; PMI and APQC named as
   alternates where a project runs against them.
-- **§5 — Project-specific rules** — additions per project (Lilian,
-  Epiq, Eat Happy–Hana, Datasphere) and the operator's standing
+- **§5 — Project-specific rules** — additions per project (Candidate L,
+  Client E, Client K, Datasphere) and the operator's standing
   preferences.
 
 ---
@@ -298,7 +298,7 @@ Applies to every project the AI operates on inside this account.
   may improve typography, tables, pagination, and visual hierarchy
   but may not alter supplied words. Proposed additions must remain
   distinguishable from the locked source content. This is the
-  Emerson Rush rule and it governs every finance-facing document
+  Client R rule and it governs every finance-facing document
   where a golden version has been proofed.
 - **Accounting gates precede product selection.** In a consolidation
   or ERP-selection assessment, statutory and reporting obligations of
@@ -468,7 +468,7 @@ Adopters replace this section with their own project blueprint.
 ## §4 · Reference framework
 
 The reference framework at high priority for this account is
-**SAP Activate**, because the highest-value active project (Lilian's
+**SAP Activate**, because the highest-value active project (Candidate L's
 transformation lane) runs against it and it defines the phase
 structure most compliance rules attach to.
 
@@ -476,7 +476,7 @@ structure most compliance rules attach to.
   Run. Each phase carries a compliance section inline in project
   canons (§5).
 - **Activate artifact naming.** The four-week discovery output shape
-  used in Eat Happy–Hana (Week-2 shortlist gate, Week-4 blueprint
+  used in Client K (Week-2 shortlist gate, Week-4 blueprint
   and cost) is the reference cadence. Adjust per project.
 
 Alternates named for reference:
@@ -502,7 +502,7 @@ Additions particular to the projects this account operates, and the
 operator's standing preferences that behave as project-independent
 rules.
 
-### §5.1 — Lilian (executive positioning + PMO)
+### §5.1 — Candidate L (executive positioning + PMO)
 
 - **Best fit outranks keyword matching.** Searches span
   transformation roles across the United States, Canada, and Europe
@@ -543,25 +543,25 @@ rules.
   optional narration, concise safety or sovereignty escalation path.
   Punitive ledger language and preloaded accusations are excluded.
 
-### §5.2 — Eat Happy–Hana consolidation
+### §5.2 — Client K consolidation
 
 - **The four-week structure** — gather data into requirements; assess
   internal capability across Dynamics, Anaplan, and SAP; assess
   external products and integrators; derive selection criteria;
   define resources, gates, and cost. Nothing is selected, configured,
   or built during discovery.
-- **Emerson Rush wording is retained verbatim** — see §2.1.
+- **Client R wording is retained verbatim** — see §2.1.
 - **Alternative structure may organize but not author.** A preferred
   report shape (e.g. Gemini's executive-summary box, flat numbered
   sections, phase-duration labels) contributes structure while every
-  approved paragraph, bullet, and table row remains Emerson Rush
+  approved paragraph, bullet, and table row remains Client R
   text.
 - **Three-person team is the expedited route** — director plus one
   functional and one technical analyst.
 
-### §5.3 — Epiq (closeout and adoption handover)
+### §5.3 — Client E (closeout and adoption handover)
 
-- **~$80,000 lane is training on already-licensed tools**, not a new
+- **~[in private record] lane is training on already-licensed tools**, not a new
   AI program.
 - **Azure AI Foundry as tenant-bound hosting and identity**;
   orchestration, observability, connectors, governance, and

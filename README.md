@@ -8,6 +8,12 @@ The project-scale version of the
 [sovereign-starter](https://github.com/EVEglyphDesign/sovereign-starter)
 two-file method — same shape, wider canon.
 
+> **Public and free to use.** This canon is made to drop into any repository and any AI
+> service – Claude, ChatGPT, Copilot, Gemini, Perplexity or your own agent. Client and person
+> names in the project rules and the register are replaced by role labels (Client E,
+> Candidate L, …), and client figures read "[in private record]". The full record is kept
+> privately.
+
 ## The two files
 
 | File | What it holds | Shareability |
@@ -81,7 +87,7 @@ notice may be removed from copies used inside private repositories.
 Every clause in `CANON.md` traces to one of:
 
 - [`eve-glyph-boot-contract`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract) — the binding boot contract and its 111-row observations register.
-- The wiki knowledge index at `memory/knowledge/projects/` — the pages for `eve-liliantwin-pmo`, `lilian-executive-positioning`, `lillian-sovereign-workspace`, `epiq-delivery-control`, `eat-happy-hana-consolidation`, `eve-datasphere-sovereign`, and `eve-glyph-boot-contract`.
+- The wiki knowledge index at `memory/knowledge/projects/` — the pages for `eve-liliantwin-pmo`, `candl-executive-positioning`, `candl-sovereign-workspace`, `cliente-delivery-control`, `eat-happy-hana-consolidation`, `eve-datasphere-sovereign`, and `eve-glyph-boot-contract`.
 - The wiki knowledge index at `memory/knowledge/preferences/` — the 20-odd standing preferences the account holder has established.
 
 Nothing has been invented in the account holder's name.

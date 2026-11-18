@@ -1,8 +1,8 @@
 
 <!-- GENERATED FILE — DO NOT EDIT.
-     Source: CANON.md (sha256 28362c43e9ad0904ada255a60b8505820ad191584d546b433752e1d4a58aace6)
+     Source: CANON.md (sha256 afa93066edc24d233479a2e22ee0d14ea3ad23a9bbb895cf59ac3f8e8a660abf)
      Built by: harness/build.py
-     Built at: 2026-09-19T01:59:09Z
+     Built at: 2026-11-18T17:11:27Z
      Edit CANON.md and re-run `python3 harness/build.py`.
      CI fails any commit where this file has drifted from its source. -->
 
@@ -299,7 +299,7 @@ Applies to every project the AI operates on inside this account.
   may improve typography, tables, pagination, and visual hierarchy
   but may not alter supplied words. Proposed additions must remain
   distinguishable from the locked source content. This is the
-  Emerson Rush rule and it governs every finance-facing document
+  Client R rule and it governs every finance-facing document
   where a golden version has been proofed.
 - **Accounting gates precede product selection.** In a consolidation
   or ERP-selection assessment, statutory and reporting obligations of
@@ -474,7 +474,7 @@ Adopters replace this section with their own project blueprint.
 
 
 The reference framework at high priority for this account is
-**SAP Activate**, because the highest-value active project (Lilian's
+**SAP Activate**, because the highest-value active project (Candidate L's
 transformation lane) runs against it and it defines the phase
 structure most compliance rules attach to.
 
@@ -482,7 +482,7 @@ structure most compliance rules attach to.
   Run. Each phase carries a compliance section inline in project
   canons (§5).
 - **Activate artifact naming.** The four-week discovery output shape
-  used in Eat Happy–Hana (Week-2 shortlist gate, Week-4 blueprint
+  used in Client K (Week-2 shortlist gate, Week-4 blueprint
   and cost) is the reference cadence. Adjust per project.
 
 Alternates named for reference:
@@ -509,7 +509,7 @@ Additions particular to the projects this account operates, and the
 operator's standing preferences that behave as project-independent
 rules.
 
-#### §5.1 — Lilian (executive positioning + PMO)
+#### §5.1 — Candidate L (executive positioning + PMO)
 
 
 - **Best fit outranks keyword matching.** Searches span
@@ -551,7 +551,7 @@ rules.
   optional narration, concise safety or sovereignty escalation path.
   Punitive ledger language and preloaded accusations are excluded.
 
-#### §5.2 — Eat Happy–Hana consolidation
+#### §5.2 — Client K consolidation
 
 
 - **The four-week structure** — gather data into requirements; assess
@@ -559,19 +559,19 @@ rules.
   external products and integrators; derive selection criteria;
   define resources, gates, and cost. Nothing is selected, configured,
   or built during discovery.
-- **Emerson Rush wording is retained verbatim** — see §2.1.
+- **Client R wording is retained verbatim** — see §2.1.
 - **Alternative structure may organize but not author.** A preferred
   report shape (e.g. Gemini's executive-summary box, flat numbered
   sections, phase-duration labels) contributes structure while every
-  approved paragraph, bullet, and table row remains Emerson Rush
+  approved paragraph, bullet, and table row remains Client R
   text.
 - **Three-person team is the expedited route** — director plus one
   functional and one technical analyst.
 
-#### §5.3 — Epiq (closeout and adoption handover)
+#### §5.3 — Client E (closeout and adoption handover)
 
 
-- **~$80,000 lane is training on already-licensed tools**, not a new
+- **~[in private record] lane is training on already-licensed tools**, not a new
   AI program.
 - **Azure AI Foundry as tenant-bound hosting and identity**;
   orchestration, observability, connectors, governance, and

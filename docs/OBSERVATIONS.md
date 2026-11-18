@@ -124,7 +124,7 @@ Newest first.
 |---|---|---|---|---|---|---|---|
 | 2026-09-12 | OBS-2026-09-12-04 | U | Agent | "One file is boot contract and operating canon. The second file is observations" | Had built three files (TERMS + NARROWING + OBSERVATIONS) with a shape question first, when the operator's prior turn had already indicated the boot contract and operating canon were condensed enough to be one file | Merge on the first cue, not the second; the operator already said all three could be one | one turn plus one shape question |
 | 2026-09-12 | OBS-2026-09-12-03 | U | Agent | Build the plug-in as pairing with the sovereign-starter image; observations are the deltas | Built a four-file plug-in with a separate DELTAS.md, and framed the plug-in as its own thing rather than the project-scale version of the starter's two-file method | Read the ask as "same method, wider scope, one register" — three files (TERMS + NARROWING + OBSERVATIONS), lineage from the starter named explicitly | one full delta-file build cycle plus one site edit |
-| 2026-09-12 | OBS-2026-09-12-02 | U | Agent | Build the plug-in the operator described — layout-agnostic, full compliance + Lilian material, delta tracking, agreed T&Cs | On each reframe, first move was to guess a smaller version and ask a narrowing question, rather than read the ask in full and execute the wider one | Read the full ask, sketch the wider version, execute it, ask only if a genuinely load-bearing detail is missing | 3 turns |
+| 2026-09-12 | OBS-2026-09-12-02 | U | Agent | Build the plug-in the operator described — layout-agnostic, full compliance + Candidate L material, delta tracking, agreed T&Cs | On each reframe, first move was to guess a smaller version and ask a narrowing question, rather than read the ask in full and execute the wider one | Read the full ask, sketch the wider version, execute it, ask only if a genuinely load-bearing detail is missing | 3 turns |
 | 2026-09-12 | OBS-2026-09-12-01 | C | Agent | Neutral two-file starter kit with no EVEglyph-specific palette or naming | Left the cream/orange hex values and Fraunces/Inter naming in `NARROWING.md`, so a fresh adopter would inherit them as if they were universal | Strip §1.5 palette and typography from the neutral starter; leave the shape but not the colours | 1 read-back cycle |
 
 ## Register — Type Δ (change)
@@ -220,7 +220,7 @@ designed to catch, and the register catches itself here.
 - **File:** TERMS.md, NARROWING.md
 - **Section:** all
 - **When:** 2026-09-12T18:45:00-06:00
-- **Reason:** operator instruction — "I want all the stuff I am currently using plus the stuff we highlighted with Lilian. This need to be a plug in to Lilian's DI PMO repository structure but it does not need to be any user can adopt it to keep their work safe and effective on the agreed terms and conditions with internal delta tracking capability"
+- **Reason:** operator instruction — "I want all the stuff I am currently using plus the stuff we highlighted with Candidate L. This need to be a plug in to Candidate L's DI PMO repository structure but it does not need to be any user can adopt it to keep their work safe and effective on the agreed terms and conditions with internal delta tracking capability"
 
 #### Was
 
