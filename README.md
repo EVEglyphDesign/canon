@@ -12,7 +12,8 @@ two-file method — same shape, wider canon.
 > service – Claude, ChatGPT, Copilot, Gemini, Perplexity or your own agent. Client and person
 > names in the project rules and the register are replaced by role labels (Client E,
 > Candidate L, …), and client figures read "[in private record]". The full record is kept
-> privately.
+> privately. A check (`.github/public_check.py`, run as a pre-push hook and as the
+> `public-check` GitHub Action) blocks client and person names; the name list is stored as hashes.
 
 ## The two files
 
@@ -87,7 +88,7 @@ notice may be removed from copies used inside private repositories.
 Every clause in `CANON.md` traces to one of:
 
 - [`eve-glyph-boot-contract`](https://github.com/EVEglyphDesign/eve-glyph-boot-contract) — the binding boot contract and its 111-row observations register.
-- The wiki knowledge index at `memory/knowledge/projects/` — the pages for `eve-liliantwin-pmo`, `candl-executive-positioning`, `candl-sovereign-workspace`, `cliente-delivery-control`, `eat-happy-hana-consolidation`, `eve-datasphere-sovereign`, and `eve-glyph-boot-contract`.
+- The wiki knowledge index at `memory/knowledge/projects/` — the pages for `eve-candltwin-pmo`, `candl-executive-positioning`, `candl-sovereign-workspace`, `cliente-delivery-control`, `clientk-consolidation`, `eve-datasphere-sovereign`, and `eve-glyph-boot-contract`.
 - The wiki knowledge index at `memory/knowledge/preferences/` — the 20-odd standing preferences the account holder has established.
 
 Nothing has been invented in the account holder's name.
